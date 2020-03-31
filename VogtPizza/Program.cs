@@ -8,5 +8,10 @@ namespace VogtPizza
         {
 
         }
+
+        public static void Run()
+        {
+
+        }
     }
 }

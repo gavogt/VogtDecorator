@@ -9,17 +9,17 @@ namespace VogtPizza
         private Pizza _pizza;
         public Cheese(Pizza pizza)
         {
-            this._pizza = pizza;
+            _pizza = pizza;
         }
 
         public override int GetCost()
         {
-            return this._pizza.GetCost()+2;
+            return _pizza.GetCost()+2;
         }
 
         public override string GetDescription()
         {
-            return this._pizza.GetDescription()+"Cheese ";
+            return _pizza.GetDescription()+", Cheese";
         }
 
     }
