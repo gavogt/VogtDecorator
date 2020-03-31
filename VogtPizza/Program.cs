@@ -6,7 +6,7 @@ namespace VogtPizza
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
         }
     }
 }
