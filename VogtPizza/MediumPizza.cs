@@ -6,7 +6,6 @@ namespace VogtPizza
 {
     class MediumPizza : Pizza
     {
- 
         public override int GetCost()
         {
             return 12;

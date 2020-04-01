@@ -7,6 +7,7 @@ namespace VogtPizza
     class Mushrooms: AddOnDecorator
     {
         private Pizza _pizza;
+
         public Mushrooms(Pizza pizza)
         {
             _pizza = pizza;
