@@ -8,7 +8,7 @@ namespace VogtPizza
     {
         public void IngredientsMenu()
         {
-            Console.WriteLine("Ingredients: ");
+            Console.WriteLine("\nIngredients: ");
             Console.WriteLine("1. Cheese");
             Console.WriteLine("2. Pepperoni");
             Console.WriteLine("3. Sausage");

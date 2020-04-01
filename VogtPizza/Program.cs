@@ -6,26 +6,31 @@ namespace VogtPizza
     {
         static void Main(string[] args)
         {
- 
-            Run(new Display(), new PizzaConsoleReader() );
+            Pizza pizza = default;
+            Run(new Display(), new PizzaConsoleReader(), new PizzaManager(pizza));
         }
 
-        public static void Run(Display display, PizzaConsoleReader pizzaConsoleReader)
+        public static void Run(Display display, PizzaConsoleReader pizzaConsoleReader, PizzaManager pizzaManager)
         {
-            Pizza pizza = default;
-            PizzaManager pizzaManager = new PizzaManager(pizza);
 
-            var choice = 0; 
+            var choice = 0;
 
             display.SizeOfPizzaMenu();
+            choice = pizzaConsoleReader.GetPizzaSizeChoice();
+            pizzaManager.SwitchOnChoiceForPizzaSize(choice);
 
-            display.IngredientsMenu();
+            do
+            {
+                display.IngredientsMenu();
+                choice = pizzaConsoleReader.GetIngrendientsChoice();
+                pizzaManager.SwitchOnChoiceForIngredients(choice);
+                pizzaManager.DisplayPizzaInfo();
+            } while (choice != 0);
 
-            //choice = pizzaConsoleReader.GetPizzaSizeChoice();
+            Console.Clear();
+            Console.WriteLine("Exiting...");
 
-
-            // if choice 1 and choice 5 do small cheese pizza
-            // new SmallPizza(new CheesePizza)
         }
+
     }
 }

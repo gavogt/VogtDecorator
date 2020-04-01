@@ -12,38 +12,37 @@ namespace VogtPizza
             _pizza = pizza;
         }
 
-        public Pizza SwitchOnChoiceForIngredients(int choice, Pizza tempDecorator)
+        public Pizza SwitchOnChoiceForIngredients(int choice)
         {
             
             switch (choice)
             {
                 case 0:
-                    Environment.Exit(0);
                     break;
                 case 1:
-                    tempDecorator = new Cheese(tempDecorator);
+                    _pizza = new Cheese(_pizza);
                     break;
                 case 2:
-                    tempDecorator = new Pepperoni(tempDecorator);
+                    _pizza = new Pepperoni(_pizza);
                     break;
                 case 3:
-                    tempDecorator = new Sausage(tempDecorator);
+                    _pizza = new Sausage(_pizza);
                     break;
                 case 4:
-                    tempDecorator = new Onions(tempDecorator);
+                    _pizza = new Onions(_pizza);
                     break;
                 case 5:
-                    tempDecorator = new Anchovies(tempDecorator);
+                    _pizza = new Anchovies(_pizza);
                     break;
                 case 6:
-                    tempDecorator = new Mushrooms(tempDecorator);
+                    _pizza = new Mushrooms(_pizza);
                     break;
                 default:
                     Console.WriteLine("Please press 0 - 6!");
                     break;
             }
 
-            return tempDecorator;
+            return _pizza;
         }
 
         public Pizza SwitchOnChoiceForPizzaSize(int choice)
@@ -69,6 +68,12 @@ namespace VogtPizza
             }
 
             return _pizza;
+        }
+
+        public void DisplayPizzaInfo()
+        {
+            Console.Write($"{_pizza.GetDescription()} costs {_pizza.GetCost():C2}");
+
         }
     }
 }

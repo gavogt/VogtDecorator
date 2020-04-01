@@ -16,7 +16,7 @@ namespace VogtPizza
                 Console.WriteLine("Choice:");
                 choice = Convert.ToInt32(Console.ReadLine());
 
-            } while (choice <= 0 || choice > 6);
+            } while (choice < 0 || choice > 6);
 
             Console.WriteLine($"Picked - {choice}");
 
@@ -33,8 +33,6 @@ namespace VogtPizza
                 choice = Convert.ToInt32(Console.ReadLine());
 
             } while (choice < 1 || choice > 3);
-
-            Console.WriteLine($"Picked - {choice}");
 
             return choice;
         }
