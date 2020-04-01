@@ -4,7 +4,7 @@ using System.Text;
 
 namespace VogtPizza
 {
-    abstract class Pizza : IPizza
+    abstract class Pizza
     {
         public abstract string GetDescription();
 
