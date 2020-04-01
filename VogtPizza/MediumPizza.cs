@@ -4,11 +4,17 @@ using System.Text;
 
 namespace VogtPizza
 {
-    class MediumPizza : Pizza, IAddOnDecorator
+    class MediumPizza : Pizza
     {
+ 
         public override int GetCost()
         {
             return 12;
+        }
+
+        public override string GetDescription()
+        {
+            return "Medium pizza";
         }
     }
 }

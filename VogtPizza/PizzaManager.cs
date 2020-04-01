@@ -12,7 +12,7 @@ namespace VogtPizza
             _pizza = pizza;
         }
 
-        public AddOnDecorator SwitchOnChoiceForIngredients(int choice, AddOnDecorator tempDecorator)
+        public Pizza SwitchOnChoiceForIngredients(int choice, Pizza tempDecorator)
         {
             
             switch (choice)
@@ -46,31 +46,29 @@ namespace VogtPizza
             return tempDecorator;
         }
 
-        public IAddOnDecorator SwitchOnChoiceForPizzaSize(int choice)
+        public Pizza SwitchOnChoiceForPizzaSize(int choice)
         {
-
-            IAddOnDecorator tempPizza = default;
 
             switch (choice)
             {
                 // Small pizza
                 case 1:
-                    tempPizza = new SmallPizza();
+                    _pizza = new SmallPizza();
                     break;
                 // Medium pizza
                 case 2:
-                    tempPizza = new MediumPizza();
+                    _pizza = new MediumPizza();
                     break;
                 // Large pizza
                 case 3:
-                    tempPizza = new LargePizza();
+                    _pizza = new LargePizza();
                     break;
                 default:
                     Console.WriteLine("Please enter 1, 2 or 3");
                     break;
             }
 
-            return tempPizza;
+            return _pizza;
         }
     }
 }

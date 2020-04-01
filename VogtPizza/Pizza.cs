@@ -6,10 +6,7 @@ namespace VogtPizza
 {
     abstract class Pizza : IPizza
     {
-        public virtual string GetDescription()
-        {
-            return "Plain Pizza";
-        }
+        public abstract string GetDescription();
 
         public abstract int GetCost();
 

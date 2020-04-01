@@ -6,8 +6,8 @@ namespace VogtPizza
 {
     
     class PizzaConsoleReader
-    {/*
-        public int GetChoice()
+    {
+        public int GetIngrendientsChoice()
         {
             var choice = 0;
 
@@ -22,7 +22,23 @@ namespace VogtPizza
 
             return choice;
         }
-        */
+
+        public int GetPizzaSizeChoice()
+        {
+            var choice = 0;
+
+            do
+            {
+                Console.Write("What type of pizza: ");
+                choice = Convert.ToInt32(Console.ReadLine());
+
+            } while (choice < 1 || choice > 3);
+
+            Console.WriteLine($"Picked - {choice}");
+
+            return choice;
+        }
+
     }
     
 }

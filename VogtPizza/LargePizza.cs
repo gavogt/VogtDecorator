@@ -10,5 +10,10 @@ namespace VogtPizza
         {
             return 16;
         }
+
+        public override string GetDescription()
+        {
+            return "Large pizza";
+        }
     }
 }
