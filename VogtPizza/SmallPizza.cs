@@ -4,7 +4,7 @@ using System.Text;
 
 namespace VogtPizza
 {
-    class SmallPizza : Pizza
+    class SmallPizza : Pizza, IAddOnDecorator
     {
         public override int GetCost()
         {
@@ -13,7 +13,7 @@ namespace VogtPizza
 
         public override string GetDescription()
         {
-            return "small pizza";
+            return "Small pizza";
         }
     }
 }

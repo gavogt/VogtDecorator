@@ -4,8 +4,9 @@ using System.Text;
 
 namespace VogtPizza
 {
+    
     class PizzaConsoleReader
-    {
+    {/*
         public int GetChoice()
         {
             var choice = 0;
@@ -21,5 +22,7 @@ namespace VogtPizza
 
             return choice;
         }
+        */
     }
+    
 }

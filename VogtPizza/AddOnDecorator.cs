@@ -4,10 +4,16 @@ using System.Text;
 
 namespace VogtPizza
 {
-    abstract class AddOnDecorator : IPizza
+    abstract class AddOnDecorator : Pizza, IPizza, IAddOnDecorator
     {
-        public abstract int GetCost();
+        public override int GetCost()
+        {
+            return 0;
+        }
 
-        public abstract string GetDescription();
+        public override string GetDescription()
+        {
+            return "";
+        }
     }
 }

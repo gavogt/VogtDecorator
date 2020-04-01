@@ -14,12 +14,12 @@ namespace VogtPizza
 
         public override int GetCost()
         {
-            return _pizza.GetCost()+2;
+            return _pizza.GetCost() + 2;
         }
 
         public override string GetDescription()
         {
-            return _pizza.GetDescription()+", Cheese";
+            return _pizza.GetDescription() + ", Cheese";
         }
 
     }
