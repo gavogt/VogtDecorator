@@ -7,10 +7,10 @@ namespace VogtPizza
         static void Main(string[] args)
         {
             Pizza pizza = default;
-            Run(new Display(), new PizzaConsoleReader(), new PizzaManager(pizza));
+            Run(new PizzaMenu(), new PizzaConsoleReader(), new PizzaBuilder(pizza));
         }
 
-        public static void Run(Display display, PizzaConsoleReader pizzaConsoleReader, PizzaManager pizzaManager)
+        public static void Run(PizzaMenu display, PizzaConsoleReader pizzaConsoleReader, PizzaBuilder pizzaManager)
         {
 
             var choice = 0;
@@ -23,7 +23,7 @@ namespace VogtPizza
             {
                 display.IngredientsMenu();
                 choice = pizzaConsoleReader.GetIngrendientsChoice();
-                pizzaManager.SwitchOnChoiceForIngredients(choice);
+                pizzaManager.AddIngredients(choice);
                 pizzaManager.DisplayPizzaInfo();
             } while (choice != 0);
 

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace VogtPizza
 {
-    class Display
+    class PizzaMenu
     {
         public void IngredientsMenu()
         {

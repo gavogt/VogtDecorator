@@ -4,15 +4,15 @@ using System.Text;
 
 namespace VogtPizza
 {
-    class PizzaManager
+    class PizzaBuilder
     {
         private Pizza _pizza;
-        public PizzaManager(Pizza pizza)
+        public PizzaBuilder(Pizza pizza)
         {
             _pizza = pizza;
         }
 
-        public Pizza SwitchOnChoiceForIngredients(int choice)
+        public Pizza AddIngredients(int choice)
         {
             
             switch (choice)
